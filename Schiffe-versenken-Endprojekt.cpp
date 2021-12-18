@@ -132,6 +132,10 @@ int Angriff(char **Feld_Spieler,char **Feld_Gegner,char **Feld_Schiff,char **Tre
 	return 0;
 
 }
+void check()
+{
+	
+}
 void Eingabe(char **Feld_Spieler,char **Feld_Schiff,char *Spieler)//Feld Spieler und schiff eingener Spieler
 {
 	int i=0;
@@ -139,6 +143,7 @@ void Eingabe(char **Feld_Spieler,char **Feld_Schiff,char *Spieler)//Feld Spieler
 	int x=0;
 	int y=0;
 	int s=0;
+	int t=0;
 	int Richtung='s';
 	int Array[10]={4,3,3,2,2,2,1,1,1,1};
 	
@@ -148,11 +153,15 @@ void Eingabe(char **Feld_Spieler,char **Feld_Schiff,char *Spieler)//Feld Spieler
 	}
 	i=10;//Anzahl der Schiffe
 	while(i>0){
-		oben:1;
+		
 		clrscr();
+		oben:1;
 		if(x<0||x>10||y<0||y>10||(Richtung!='s'&&Richtung!='w'))
-			printf("\t\t\t\t\t++++++++++++++falsche Eingabe++++++++++++++\n\t\t\t                                                                      .uuu\n\t\t\t    z@#´%%c                      .uuzm**´´´´´*%%mu..             z*´` .e@#N\n\t\t\t   @!!!R.  #c              .z*´                    ^*c       z    dT!!!!!>\n\t\t\t  ´!!!!!!N   ´i         u*´                            #s  :´   @?!!!!!!!R\n\t\t\t  t!!!!!!!#u   ´i    .@                                  ^$   :R!!!!!!!!!X\n\t\t\t  ´!!!!!!!!!#c   ´i:#                                      ?> R!!!!!!!!!!X\n\t\t\t  ´!!!!!!!!!!!N   @                                         4W!!!!!!!!!!!>\n\t\t\t  ´!!!!!!!!!!!!Ru´                                           ?!!!!!!!!!!X\n\t\t\t  ´X!!!!!!!!!!!9~                                      .  .  ´X!!!!!!!!!6\n\t\t\t   R!!!!!!!!!!tF                                     z$#`   h &!!UR!!!!!F\n\t\t\t   ?!!!!!$X!!!$                                    .@       X $WTR!!!!!X\n\t\t\t    M!!!!!i#U!E  .                                @F        ! FdR!!!!!!f\n\t\t\t    ´X!!!!!#c´?u@#´*$N.                         :$          F´9!!!!!!!@\n\t\t\t     9!!!!!!!?NM      ^*c                      dF          ´ @!!!!!!!X>\n\t\t\t      R!!!!!!!!&         ´e                   d            K<!!!!!!!XF\n\t\t\t      ´X!!!!!!!M>          ^N                f            < E!!!!!!X´\n\t\t\t        t!!!!!!!#            ^N            :´      .e$´^  Fn!!!!!XP\n\t\t\t         #X!!!!!!ML             *c       z´    .e$$$$$   M´!!!!W*\n\t\t\t           ´*UX!!X@t  ^%%u.         ´´**#).zd$$#$$$$$$$  <\\*@**´\n\t\t\t                    ´N    4$$$$$@$$$)$$#$$k4$$$$$$$$$E :$\n\t\t\t                       ?>  ´$$$$$$´:$$$W$$$ ´$$$$$$$$   %%\n\t\t\t                      :´           ? ^#*´  S  ´$$$$$     ?\n\t\t\t                      F            L      d$L            X\n\t\t\t                      &           t$i    @$$$           f\n\t\t\t                       *          $$$$$$$$$$\\&        @\n\t\t\t                        ´*.      W'$$$$$$$$FM h    u#\n\t\t\t                           ^*muz* %% $$$$$$´:    `´\n\t\t\t                                   # ^**´ d\n\t\t\t                                     ´***´");
-			//printf("\t\t\t\t\t++++++++++++falsche Eingabe++++++++++++\n\t\t\t\t\t\t  \\/________________        \n\t\t\t\t\t\t /     _____________)\n\t\t\t\t\t\t/     /     /   \\ |         \n\t\t\t\t\t\t\\/\\/\\/     (O) (O)|           \n\t\t\t\t\t\t  |           ------, \n\t\t\t\t\t\t  |  _       ______/ \n\t\t\t\t\t\t  | (_      /   \\  \\\n\t\t\t\t\t\t  |        /  ___\\_ \\       \n\t\t\t\t\t\t  |        \\      / / \n\t\t\t\t\t\t__|_________\\______/\n\t\t\t\t\t\t\\______________\\./__\\   \n\t\t\t\t\t\t /     .       | \\  |\n\t\t\t\t\t\t \\    /_\\   .  |  \\ |\\     \n\t\t\t\t\t\t |`\\       /_\\ |   \\| \\\n\n");		
+		{
+			printf("\t\t\t\t\t++++++++++++++falsche Eingabe++++++++++++++");
+		}//printf("\n\t\t\t                                                                      .uuu\n\t\t\t    z@#´%%c                      .uuzm**´´´´´*%%mu..             z*´` .e@#N\n\t\t\t   @!!!R.  #c              .z*´                    ^*c       z    dT!!!!!>\n\t\t\t  ´!!!!!!N   ´i         u*´                            #s  :´   @?!!!!!!!R\n\t\t\t  t!!!!!!!#u   ´i    .@                                  ^$   :R!!!!!!!!!X\n\t\t\t  ´!!!!!!!!!#c   ´i:#                                      ?> R!!!!!!!!!!X\n\t\t\t  ´!!!!!!!!!!!N   @                                         4W!!!!!!!!!!!>\n\t\t\t  ´!!!!!!!!!!!!Ru´                                           ?!!!!!!!!!!X\n\t\t\t  ´X!!!!!!!!!!!9~                                      .  .  ´X!!!!!!!!!6\n\t\t\t   R!!!!!!!!!!tF                                     z$#`   h &!!UR!!!!!F\n\t\t\t   ?!!!!!$X!!!$                                    .@       X $WTR!!!!!X\n\t\t\t    M!!!!!i#U!E  .                                @F        ! FdR!!!!!!f\n\t\t\t    ´X!!!!!#c´?u@#´*$N.                         :$          F´9!!!!!!!@\n\t\t\t     9!!!!!!!?NM      ^*c                      dF          ´ @!!!!!!!X>\n\t\t\t      R!!!!!!!!&         ´e                   d            K<!!!!!!!XF\n\t\t\t      ´X!!!!!!!M>          ^N                f            < E!!!!!!X´\n\t\t\t        t!!!!!!!#            ^N            :´      .e$´^  Fn!!!!!XP\n\t\t\t         #X!!!!!!ML             *c       z´    .e$$$$$   M´!!!!W*\n\t\t\t           ´*UX!!X@t  ^%%u.         ´´**#).zd$$#$$$$$$$  <\\*@**´\n\t\t\t                    ´N    4$$$$$@$$$)$$#$$k4$$$$$$$$$E :$\n\t\t\t                       ?>  ´$$$$$$´:$$$W$$$ ´$$$$$$$$   %%\n\t\t\t                      :´           ? ^#*´  S  ´$$$$$     ?\n\t\t\t                      F            L      d$L            X\n\t\t\t                      &           t$i    @$$$           f\n\t\t\t                       *          $$$$$$$$$$\\&        @\n\t\t\t                        ´*.      W'$$$$$$$$FM h    u#\n\t\t\t                           ^*muz* %% $$$$$$´:    `´\n\t\t\t                                   # ^**´ d\n\t\t\t                                     ´***´");
+		
+		//printf("\t\t\t\t\t++++++++++++falsche Eingabe++++++++++++\n\t\t\t\t\t\t  \\/________________        \n\t\t\t\t\t\t /     _____________)\n\t\t\t\t\t\t/     /     /   \\ |         \n\t\t\t\t\t\t\\/\\/\\/     (O) (O)|           \n\t\t\t\t\t\t  |           ------, \n\t\t\t\t\t\t  |  _       ______/ \n\t\t\t\t\t\t  | (_      /   \\  \\\n\t\t\t\t\t\t  |        /  ___\\_ \\       \n\t\t\t\t\t\t  |        \\      / / \n\t\t\t\t\t\t__|_________\\______/\n\t\t\t\t\t\t\\______________\\./__\\   \n\t\t\t\t\t\t /     .       | \\  |\n\t\t\t\t\t\t \\    /_\\   .  |  \\ |\\     \n\t\t\t\t\t\t |`\\       /_\\ |   \\| \\\n\n");		
 		s=0;
 		x=0;
 		y=0;
@@ -164,27 +173,65 @@ void Eingabe(char **Feld_Spieler,char **Feld_Schiff,char *Spieler)//Feld Spieler
 		fflush(stdin);
 		x=x-64;
 		y=y-47;
-		if(x<0||x>10||y<0||y>10)
+		if(x<0||x>10||y<0||y>10 ||Feld_Spieler[x][y]=='X')
+			{
+			if(Feld_Spieler[x][y]=='X')
+			printf("\n Die Stelle ist belegt, platziere dein Schiff woanders!\n");
+			goto oben;	
+			}
+		if(Feld_Spieler[x-1][y]=='X'||Feld_Spieler[x+1][y]=='X'||Feld_Spieler[x][y-1]=='X'||Feld_Spieler[x][y+1]=='X')
+		{
+			printf("so wird es nix, da ein Schiff in der Nähe steht, platziere das Schiff woanders!");
 			goto oben;
+		}
 		if(Array[10-i]!=1){
+		t=x-Array[10-i]+1;
 		printf("Schiff senkrecht(s) oder waagerecht(w) setzen: ");
 		scanf("%c",&Richtung);
 		fflush(stdin);
 		if(Richtung!='s'&&Richtung!='w')
 		goto oben;
-		clrscr();
+	//	clrscr();
 		printf("Position:%c%c\n",x+64,y+47);
 		printf("Richtung:%c",Richtung);
 		if(Richtung=='s'){//muss k erhöht werden als x
-			for(j=0;j<2*Array[10-i];j++){
+			s=0;
+			if((11-x)<Array[10-i]){
+				for(j=0;j<2*Array[10-i];j++){
+				
+					printf("t+s: %d",t+s);
+					Feld_Spieler[t+s][y]='X';
+					Feld_Schiff[10-i][j]=t+s;
+					j++;//für den ungeraden Wert
+					Feld_Schiff[10-i][j]=y;
+					s++;//damit die Stelle beim Spieler Feld sich um 1 erhöht
+					if(Feld_Spieler[(t+s)-1][y]=='X'||Feld_Spieler[(t+s)+1][y]=='X'||Feld_Spieler[t+s][y-1]=='X'||Feld_Spieler[t+s][y+1]=='X')
+					{	
+						printf("so wird es nix, da ein Schiff in der Nähe steht, platziere das Schiff woanders!");
+						goto oben;
+					}
+				}
+				
+			}
+			if(11-x >= Array[10-i]){
+				for(j=0;j<2*Array[10-i];j++){
 				Feld_Spieler[x+s][y]='X';
+			//	printf("x+s: %d",x+s);
 				Feld_Schiff[10-i][j]=x+s;
 				j++;//für den ungeraden Wert
 				Feld_Schiff[10-i][j]=y;
 				s++;//damit die Stelle beim Spieler Feld sich um 1 erhöht
+					if(Feld_Spieler[(t+s)-1][y]=='X'||Feld_Spieler[(t+s)+1][y]=='X'||Feld_Spieler[t+s][y-1]=='X'||Feld_Spieler[t+s][y+1]=='X')
+					{	
+						printf("so wird es nix, da ein Schiff in der Nähe steht, platziere das Schiff woanders!");
+						goto oben;
+					}
+			}	
 			}
+			
 		}
-		if(Richtung=='w')//muss l erhöht werden als y{
+		printf("\nSchritt 2");
+		if(Richtung=='w'){//muss l erhöht werden als y
 			for(j=0;j<2*Array[10-i];j++){
 				Feld_Spieler[x][y+s]='X';
 				Feld_Schiff[10-i][j]=x;
@@ -204,6 +251,7 @@ void Eingabe(char **Feld_Spieler,char **Feld_Schiff,char *Spieler)//Feld Spieler
 		Anzeige_Spieler_Feld(Feld_Spieler,Spieler);
 		i--;
 	}
+}
 }
 int main()
 {
@@ -246,7 +294,7 @@ int main()
 			Feld_Gegner_von_B[i][j]='?';
 		}
 	}
-	system("color 16");/*61*/
+	system("color 61");/*61*/
 
 	Spieler='A';
 	printf("Spieler (A)\nSpieler (B)\nSpieler (A) beginnt: \n");
