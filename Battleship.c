@@ -3,7 +3,7 @@ Das Programm hat die 4 Felder, 2 Gegner Felder und 2 Spieler Felder. Jedem Spiel
 angezeigt. In seinem Feld kann er sehen wo seine Schiffe sind, auf dem Gegner Feld kann er nur sehen was er getroffen hat
 und ob das Wasser oder getroffenes Schiff ist, wenn der was trifft, dann wird das mit 'g'gekennzeichnet. Es wird die Anzahl der 
 Schiffe festgelegt und wie groß diese Schiffe sind
-*/
+ */
 #include<stdio.h>
 #include<stdlib.h>
 #include<stdbool.h>
